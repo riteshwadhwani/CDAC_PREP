@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <select id="select" style="padding: 20px; background-color: gainsboro;">
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+            <option value="4">Option 4</option>
+        </select>
+        <button onclick="clicked()">
+            Clear Selected 
+        </button>
+    </div>
+    <script>
+        const clicked = () =>{
+            let value = document.querySelector("#select").value;
+            alert("removing!!")
+            setTimeout(()=>{
+                
+                document.querySelector("#select").remove(value);
+
+            },300)
+        }
+
+    </script>
+</body>
+</html>

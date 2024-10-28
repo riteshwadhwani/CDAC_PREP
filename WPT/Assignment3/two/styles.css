@@ -1,0 +1,26 @@
+.wrapper{
+    display: flex;
+    column-gap: 40px;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    column-gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.input{
+    padding: 20px;
+    
+}
+
+#showrecords{
+    font-size: x-large;
+    color: rgb(215, 88, 88);
+}

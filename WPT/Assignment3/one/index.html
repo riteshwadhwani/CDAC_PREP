@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+    <div id="wrapper">
+        <p id="para">
+            It is rightly said that being disciplined is essential in life. When a person leads life, they set a easy part to success. They will develop an approach to happiness and a beautiful future ahead. Being discipline is the practice of having a scheduled daily life routine which helps an individual to be punctual and hard-working and individual individual start what being receipting means from the time they are young. Even though discipline takes a lot of effort that advantages of discipline life makes it a worthwhile endeavour.
+        </p>
+        <button onclick="changeFont()" class="btn">
+            Click Me
+        </button>
+    </div>
+    <script>
+        const changeFont = () => {
+            var div = document.getElementById("wrapper");
+            if(div.className == ""){
+                div.className += "wrap";
+            }
+            else{
+                div.className = "";
+            }
+            var d = document.getElementById("para");
+            if(d.className == ""){
+                d.className += "change";
+            }
+            else{
+                d.className= "";
+            }
+        }
+    </script>
+</body>
+</html>
