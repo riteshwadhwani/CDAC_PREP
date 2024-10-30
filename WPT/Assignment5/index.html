@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .highlight{
+            background: yellow;
+        }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: ceter;">
+        <div>
+            <button id="btn">Click Me</button>
+          </div>
+          <div>
+              <ul id="list">
+                  <li>list 1</li>
+                  <li>list 2</li>
+                  <li>list 3</li>
+                  <li>list 4</li>
+              </ul>
+              <button id="listbtn">
+                click Me to highlight
+              </button>
+          </div>
+          <div>
+            <p id="Order"><span class="oderId">Latte</span></p>
+            <button class="milkbtn">Change Order to Milk</button>
+          </div>
+          <div>
+            <ul id="shoppingList">
+                <li>BAT</li>
+                <li>Bowl</li>
+                <li>Stadium</li>
+                <li>Helmet</li>
+            </ul>
+            <div>
+                <input id="addlist" type="text" placeholder="Write an Item">
+                <button id="shpbtn">
+                    Add
+                </button>
+            </div>
+          </div>
+          <div>
+            <select id="playersList" style="padding: 10px; background-color: aquamarine;">
+                <option id="p1"> Player 1</option>
+                <option id="p2"> Player 2</option>
+                <option id="p3"> Player 3</option>
+            </select>
+            <button id="rmbtn">
+                Remove the selected One
+            </button>
+          </div>
+    </div>
+    <script>
+      document.getElementById("btn").addEventListener("click", () => {
+        console.log(this);
+      });
+
+      console.log("With Normal function");
+      document.getElementById("btn").addEventListener("click", function () {
+        console.log(this);
+      });
+      document.getElementById('listbtn').addEventListener('click',()=>{
+        document.getElementById('list').children[0].setAttribute("class","highlight");
+      })
+
+      document.getElementById('listbtn').addEventListener('click',()=>{
+        document.getElementById('list').firstElementChild.setAttribute("class","highlight");
+      })
+
+      document.getElementById('listbtn').addEventListener('click',()=>{
+        document.getElementById('list').firstElementChild.classList.add("highlight");
+      })
+
+    document.querySelector(".milkbtn").addEventListener('click',()=>{
+        var child1 = document.getElementById('Order').firstElementChild;
+        var words = document.querySelector('.milkbtn').textContent.split(' ');
+        var last = words[words.length - 1];
+        last == 'Milk' ? document.querySelector('.milkbtn').textContent = 'Change to Latte' :
+        document.querySelector('.milkbtn').textContent = 'Change to Milk';
+        
+        document.getElementById('Order').firstElementChild.textContent = 
+        document.getElementById('Order').firstElementChild.textContent == 'Latte' ? 'Milk' : 'Latte';
+
+    })
+    document.getElementById("shpbtn").addEventListener('click',(e)=>{
+            e.preventDefault();
+            var value = document.getElementById("addlist").value;
+            console.log(value)
+            var newElement = document.createElement('li');
+            newElement.textContent = value;
+            document.getElementById("shoppingList").appendChild(newElement);
+        })
+
+    document.getElementById("rmbtn").addEventListener('click',()=>{
+        var childrens = document.getElementById("playersList").firstChild.remove();
+    })
+
+
+    </script>
+  </body>
+</html>
