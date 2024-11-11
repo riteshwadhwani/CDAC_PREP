@@ -10,9 +10,14 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-   
+    <style>
+      *{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+    </style>
   </head>
   <body>
     <div class="m-2 overflow-hidden" >
@@ -34,8 +39,11 @@
                 </li>
               </ul>
             </div>
-            <div class="container-fluid col-lg-5 collapse navbar-collapse d-sm-flex justify-content-between">
-              
+            <div id="adminBar" class="visually-hidden" >
+                Show Orders
+            </div>
+            <div id="myOrders" class="visually-hidden">
+              Myorders
             </div>
           </div>
           <div class="container-fluid col-lg-2 col-md-12 d-sm-flex justify-content-around gap-0">
@@ -162,7 +170,7 @@
         <div class="genre-section mt-0 bg-primary bg-opacity-10">
           <div class="container mt-5 ">
             <div class="border shadow bg-secondary bg-opacity-25 rounded-3 p-5 mb-5 border border-secondary border-opacity-50 row mt-2">
-              <div class="d-sm-flex w-100 justify-content-between align-items-center ">
+              <div class="d-sm-flex w-100 justify-content-between align-items-center">
                 <h1>Music</h1>
                 <div>
                   <a href="../EventDetails/EventsPages/MusicPage/index.html" class="btn btn-info" id="music-more"> More</a>

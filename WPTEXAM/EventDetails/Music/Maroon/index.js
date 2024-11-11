@@ -20,6 +20,7 @@ bookBtn.addEventListener("click", () => {
       id,
       heading: `${heading.textContent}`,
       imageSrc: `${imageSrc.getAttribute("src")}`,
+      quantity:1, //1st
       price: 1500,
     };
     cartItems.push(showObj);

@@ -19,6 +19,7 @@ bookBtn.addEventListener("click", () => {
     let showObj = {
       id,
       heading: `${heading.textContent}`,
+      quantity:1,
       imageSrc: `${imageSrc.getAttribute("src")}`,
       price: 500,
     };
@@ -47,6 +48,5 @@ logout.addEventListener("click", () => {
 });
 
 var cartBtn = document.querySelector("#cart-btn");
-
 cartBtn.innerHTML = `<a style="text-decoration: none; color: white;" href="../../../CartPage/index.html"> Cart [${cartItems.length}]</a>`;
 cartBtn.classList = "btn btn-danger p-2";

@@ -19,6 +19,7 @@ bookBtn.addEventListener("click", () => {
     let showObj = {
       id,
       heading: `${heading.textContent}`,
+      quantity:1,
       imageSrc: `${(imageSrc.getAttribute("src"))}`,
       price: 0,
     };

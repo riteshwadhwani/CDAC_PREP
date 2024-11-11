@@ -68,3 +68,16 @@ border: 1px solid lightblue;
     box-shadow: 5px 5px 5px grey;
     cursor:pointer
 }
+
+.activ{
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(0, 132, 255);
+    border-radius: 50px;
+    user-select: none;
+}
+.activ:hover{
+    cursor: pointer;
+    background-color: rgb(16, 66, 112);
+}

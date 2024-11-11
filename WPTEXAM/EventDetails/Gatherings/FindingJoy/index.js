@@ -18,6 +18,7 @@ bookBtn.addEventListener("click", () => {
     let imageSrc = document.querySelector("#showImage");
     let showObj = {id,
       heading: `${heading.textContent}`,
+      quantity:1,
       imageSrc: `${(imageSrc.getAttribute("src"))}`,
       price: 0,
     };
